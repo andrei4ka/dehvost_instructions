@@ -1,0 +1,51 @@
+# Network interface driver
+# May be one of virtio, e1000, pcnet, rtl8139
+export INTERFACE_MODEL='e1000'
+export MAKE_SNAPSHOT='true'
+
+# ISO
+export ISO_PATH=/var/lib/libvirt/images/fuel-6.1-511-2015-06-05_17-16-32.iso
+
+# Manifests
+#export SYNC_DEPL_TASKS=true
+#export UPLOAD_MANIFESTS=true
+#export UPLOAD_MANIFESTS_PATH=~/systests/adidenko/fuel-library/deployment/puppet/
+
+# Release
+export OPENSTACK_RELEASE="Ubuntu"
+#export OPENSTACK_RELEASE="CentOS"
+
+# HW
+export NODES_COUNT=5
+export ADMIN_NODE_MEMORY=4096
+export SLAVE_NODE_MEMORY=4096
+export SLAVE_NODE_CPU=4
+#export ADMIN_FORWARD=route
+# DOCKER
+# export BUILD_IMAGES=true
+
+# TEST GROUP
+export MY_GROUP="setup"
+#export MY_GROUP="deploy_simple_flat"
+#export MY_GROUP="deploy_ha_flat"
+#export MY_GROUP="deploy_ha"
+#export MY_GROUP="deploy_ha_vlan"
+#export MY_GROUP="deploy_neutron_vlan_ha"
+#export MY_GROUP="deploy_neutron_gre_ha"
+#export MY_GROUP="ha_delete_vips"
+#export MY_GROUP="ceph_ha"
+#export MY_GROUP="ceph_multinode_with_cinder"
+#export MY_GROUP="deploy_simple_cinder"
+#export MY_GROUP="ceph_rados_gw"
+#export MY_GROUP="deploy_pr_ha"
+#export MY_GROUP="test_pullrequest"
+#export MY_GROUP="deploy_ceilometer_simple_with_mongo"
+#export MY_GROUP="deploy_ceilometer_ha_with_mongo"
+#export MY_GROUP="deploy_neutron_vlan"
+#export MY_GROUP="deploy_simple_zabbix"
+#export MY_GROUP="bvt_1"
+#export MY_GROUP="bvt_2"
+#export MY_GROUP="deploy_bonding_ha_balance_slb"
+#export MY_GROUP="deploy_ha_neutron"
+#export MY_GROUP="ha_flat_scalability"
+#export MY_GROUP="deploy_ha_one_controller_flat"

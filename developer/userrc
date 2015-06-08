@@ -1,0 +1,19 @@
+# Define network for example: '10.100.0.0' - it means, that you occupied network 10.100.0.0/24
+# or '10.10..0.0'  - 10.10.0.0/24
+# Also, check network availability by running this script ./check_occupied_networks.sh
+
+USER='developer'
+NET='10.100.0.0'
+
+
+#Colors an appearence
+RED="echo -en \\033[1;31m"
+GREEN="echo -en \\033[1;32m"
+RESET="echo -en \\033[0;39m"
+YELLOW="echo -en \\e[0;93m"
+BOLD=$(tput bold)
+export COLUMNS=$(tput cols)
+TOEND=$(tput hpa ${COLUMNS})$(tput cub 6)
+POOL=`echo $NET | awk -F '.' '{print $1 "." $2}'`
+SUBNET=`echo $NET | awk -F '.' '{print $2}'`
+DIGIT=`echo $NET | awk -F '.' '{print substr($2, 1, 1)}'`
